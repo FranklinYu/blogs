@@ -13,6 +13,9 @@
 * IDE
     * [LiClipse](http://www.liclipse.com/)
 * [Gitter](https://gitter.im)
+* LaTeX 腳本
+    * [texfot](https://www.ctan.org/tex-archive/support/texfot)，簡化 TeX 系列編譯的輸出，適用於一切 TeX 系列命令。
+    * [texliveonfly](https://www.ctan.org/pkg/texliveonfly)，讓 BasicTeX 用戶在編譯時自動安裝缺失的宏包。
 
 ## Windows
 
