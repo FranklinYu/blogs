@@ -1,4 +1,6 @@
-# 跨平臺
+# 小工具
+
+## 跨平臺
 
 * [小狼毫/鼠鬚管/中州韻](http://rime.im/)，繁體拼音輸入法
 * [FileZilla](https://filezilla-project.org)，FTP 圖形客戶端
@@ -12,7 +14,7 @@
     * [LiClipse](http://www.liclipse.com/)
 * [Gitter](https://gitter.im)
 
-# Windows
+## Windows
 
 * [WinDjView](https://sourceforge.net/projects/windjview/)，[DjVu](http://zh.wikipedia.org/wiki/DjVu)文件閱讀器。DjVu 文件常用於文獻，和 PDF 相似。
 * [Markdown Pad](http://www.markdownpad.com/)
@@ -23,13 +25,13 @@
 * [Directshow Filters](http://www.xiph.org/dshow/)，用 Windows Media Player 播放 OGG 和 FLAC 文件。
 * [WinSCP](http://winscp.net/eng/docs/lang:cht)，FTP 圖形客戶端
 
-# OS X
+## OS X
 
 * [KyPass Companion](http://www.kyuran.be/logiciels/kypass4mac/)，密碼管理工具。
 * [FTP 工具列表](http://apple.stackexchange.com/a/25667)
 * [BetterTouchTool](http://www.boastr.de/)
 
-# 線上工具
+## 線上工具
 
 * [作業部落](https://www.zybuluo.com)，[簡書](http://www.jianshu.com/)的替代品。
 * [StackEdit](https://stackedit.io/editor)，在線 Markdown 編輯器，可以同步到 Dropbox 和 GoogleDrive
@@ -52,7 +54,7 @@
 * [Runnable](http://code.runnable.com/)，支持 C++ Java Ruby Rails Python Django Flask jQuery Node.js [Express](http://expressjs.com/) Bash .NET PHP CodeIgniter CakePHP Dart
 * [Runnable beta](https://runnable.io)，和 Runnable 區別未知
 
-# 極限編程
+## 極限編程
 
 * 持續整合服務（Continuous Integration）
     * [Semaphore](https://semaphoreci.com)，两个免费私有项目
@@ -64,6 +66,6 @@
 * 代碼質量檢查
 	* [Hakiri](https://hakiri.io/)
 
-# Gnome shell
+## Gnome shell
 
 * [AppKeys](https://extensions.gnome.org/extension/413/dash-hotkeys/)（來自 [Ask Ubuntu](http://askubuntu.com/a/197349)）

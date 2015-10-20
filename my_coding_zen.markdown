@@ -6,7 +6,7 @@
 - Use [Shebang](http://en.wikipedia.org/wiki/Shebang_(Unix)) for standalone
   scripts.
 
-# C/C++
+## C/C++
 
 - [C coding standard](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)
 - [Tabs for indentation, spaces for alignment](http://stackoverflow.com/a/8769873).
@@ -19,17 +19,17 @@
         - Production mode: `-O3`
         - C++: `-std=c++11`
 
-# Ruby
+## Ruby
 
 - Refer to [GitHub](https://github.com/styleguide/ruby),
   Batsov's [Ruby](https://github.com/bbatsov/ruby-style-guide) and [Rails](https://github.com/bbatsov/rails-style-guide) style guide.
 - [RSpec guides](http://betterspecs.org/)
 - Fix main version of gems in `Gemfile` (with `~>`).
 
-# Python
+## Python
 
 - Refer to [Github](https://www.python.org/dev/peps/pep-0008/)
 
-# Git
+## Git
 
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
