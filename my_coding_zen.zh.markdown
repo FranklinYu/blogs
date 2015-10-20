@@ -18,8 +18,8 @@
 
 ## Ruby
 
-- 參考 [GitHub Ruby指南](https://github.com/styleguide/ruby)，（Juanito Fatas翻譯的）[Ruby社羣指南](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhTW.md) 和 [Rails社羣指南](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md)。
-- [RSpec指導](http://betterspecs.org/zh_tw/)
+- 參考 [GitHub Ruby 指南](https://github.com/styleguide/ruby)，（Juanito Fatas翻譯的）[Ruby 社羣指南](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhTW.md) 和 [Rails 社羣指南](https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md)。
+- [RSpec 指導](http://betterspecs.org/zh_tw/)
 - 在 `Gemfile` 中用 `~>` 固定 gem 的版本。
 
 ## Python

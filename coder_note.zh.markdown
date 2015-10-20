@@ -1,8 +1,8 @@
 # 程序員筆記
 
-* 腳本中的多行字符串：[Here文檔](http://zh.wikipedia.org/zh-hant/Here%E6%96%87%E6%A1%A3)
+* 腳本中的多行字符串：[Here 文檔](http://zh.wikipedia.org/zh-hant/Here%E6%96%87%E6%A1%A3)
 * Ruby：`attr_accessor != attr_reader + attr_writer`。前者定義了其他的 access 方式，比如 `<<`。
-* [棄用`web_steps.rb`](http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off)
+* [棄用 `web_steps.rb`](http://aslakhellesoy.com/post/11055981222/the-training-wheels-came-off)
 * Minify
 * Rails 應用程序服務器
 	* 在 PaaS 上，使用 PaaS 推薦的軟件，如 Heroku 推薦 Puma；
