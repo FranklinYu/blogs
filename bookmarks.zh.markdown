@@ -1,3 +1,5 @@
+# 書籤
+
 * [交大校園網路拓撲](http://net.sjtu.edu.cn/info/1011/1209.htm)，交大網路網速實時反饋。
 * [聽力測驗](http://www.chiphell.com/thread-254346-1-1.html)
 * [幫助改進谷歌翻譯](https://translate.google.com/community)
@@ -14,7 +16,7 @@
 * 什麼是`SysWOW64`？為什麼64位系統的設定檔還在`System32`裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-%E4%BB%80%E9%BA%BC%E6%98%AFSysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 * [Portable Apps](http://portableapps.com/)
 
-# 有意思的網站
+## 有意思的網站
 
 * [Hacker-Typer Neo](http://fediafedia.com/neo/ "coding by mashing keyboard")
 * [guimp](http://www.guimp.com/ "smallest website in the world")
@@ -28,13 +30,13 @@
 * [Cipher](http://www.gamemastertips.com/cipher/cipher.htm)，解謎遊戲，需要基本網絡知識。
 * [中國的網絡審查](https://zh.greatfire.org)
 
-# 個人博客
+## 個人博客
 
 * [博客集合](http://www.daquan8.com/)
 * [Matrix67](http://www.matrix67.com/)（顾森）和[考據癖](http://localhost-8080.com/)（蔡雪琴）夫婦
 * [始终](http://liam0205.me/)，ctex巨集包維護者
 
-# 學術
+## 學術
 
 * [standard predefined macros in GCC](https://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html)
 * [netsh](http://www.netsh.org/)，計算機相關博客站，包含Host源。
@@ -48,7 +50,7 @@
 * [POSIX 標準](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 * [ACM Symposium on Operating Systems Principles](http://sosp.org/)
 
-## 大陸代碼託管
+### 大陸代碼託管
 
 * [GitCafé](https://gitcafe.com)
 * [GitShell](https://gitshell.com)
@@ -56,7 +58,7 @@
 * [京東代碼庫](https://code.jd.com)
 * [Coding.Net](https://coding.net)
 
-## 腳本
+### 腳本
 
 Python
 
@@ -78,7 +80,7 @@ Bash
 
 * [`**` wildcard in Bash](http://www.linuxjournal.com/content/globstar-new-bash-globbing-option)
 
-## LaTeX
+### LaTeX
 
 * [LaTeX工作室](http://www.latexstudio.net/ "LaTeX Studio")
 * [LaTeX編輯部](http://zzg34b.w3.c361.com/index.htm)
@@ -88,7 +90,7 @@ Bash
 * [TUG引文包目錄](http://ftp.math.utah.edu/pub//tex/bib/index-table.html)（英文）
 * [CTeX 主頁](http://www.ctex.org/HomePage)
 
-## 公開課
+### 公開課
 
 * [Academic Earth](http://academicearth.org/)
 * [CourseEra](https://www.coursera.org)
@@ -99,7 +101,7 @@ Bash
 * [Codecademy](http://www.codecademy.com/learn)
 * [Dash](https://dash.generalassemb.ly)：HTML，CSS
 
-## 程序無關
+### 程序無關
 
 * [提問的智慧](/doc/oss/smart-questions.html)
 * [Anatomy of a Resume](http://www.bu.edu/careers/resumes-cover-letters/resumes/anatomy-of-a-resume/ "Boston University")
@@ -107,7 +109,7 @@ Bash
 * [Microsoft Academic Search](http://academic.research.microsoft.com/)
 * [修改Mathematica默認筆記本顯示放大率](http://forums.wolfram.com/student-support/topics/21046 "increasing default font size")，來自Wolfram學生支持論壇（現已關閉並遷移至Wolfram社區）
 
-# 漫畫閱讀
+## 漫畫閱讀
 
 * [西乔的九卦](http://xiqiao.info/)
 * [HJ Story](http://hjstory.tumblr.com/)
@@ -120,12 +122,12 @@ Bash
 * [Wait But Why](http://waitbutwhy.com/)，英文趣味科普網站
 * [Dilbert](http://dilbert.com/)，《狗伯特极机密管理法则》原著
 
-# 遊戲
+## 遊戲
 
 * [Humble Bundle](https://www.humblebundle.com/)
 * [Cities In Motion論壇](http://forum.paradoxplaza.com/forum/forumdisplay.php?740-Cities-in-Motion-2)
 * [Agar](http://agar.io/)，網頁遊戲，類似孢子第一階段
 
-# 敏感信息
+## 敏感信息
 
 * [防火牆測試](http://www.greatfirewallofchina.org/index.php)，供牆外使用
