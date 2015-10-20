@@ -67,7 +67,6 @@ Python
 * [Python Wheels](http://pythonwheels.com/)，方便 Python 安裝（取消對 C 編譯器的依賴）
 * [非官方 Python 擴展庫](http://www.lfd.uci.edu/~gohlke/pythonlibs/)，來自加州大學 Irvine 分校。
 * [Can I use Python 3?](https://caniusepython3.com)
-* [Quantified Code](https://www.quantifiedcode.com)，Python 代碼規範化
 
 Ruby
 

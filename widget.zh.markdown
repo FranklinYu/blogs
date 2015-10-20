@@ -64,11 +64,12 @@
     * [Semaphore](https://semaphoreci.com)，两个免费私有项目
     * [Travis CI](https://travis-ci.org)
     * [AppVeyor](http://www.appveyor.com/)
-* [Gemnasium](https://gemnasium.com)，自動更新依賴。兩個免費私有項目。
+* [Gemnasium](https://gemnasium.com)，自動更新 Ruby 項目依賴。兩個免費私有項目。
 * [Code Climate](https://codeclimate.com)
 * [CoverAll](https://coveralls.io/)
 * 代碼質量檢查
-	* [Hakiri](https://hakiri.io/)
+	* [Hakiri](https://hakiri.io/)（Ruby）
+    * [Quantified Code](https://www.quantifiedcode.com)（Python）
 
 ## Gnome shell
 
