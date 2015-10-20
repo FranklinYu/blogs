@@ -84,7 +84,6 @@ Bash
 
 * [LaTeX 工作室](http://www.latexstudio.net/ "LaTeX Studio")
 * [LaTeX 編輯部](http://zzg34b.w3.c361.com/index.htm)
-* LaTeX 在綫合作網站：[Overleaf](http://www.overleaf.com)（前 WriteLaTeX）和 [ShareLaTeX](http://www.sharelatex.com)
 * [Typesetting a directed, weighted graph with TikZ](http://tex.stackexchange.com/q/37185/25432 "LaTeX Stack Exchange")
 * [TeXStudio user manual](http://texstudio.sourceforge.net/manual/current/usermanual_en.html)（英文）
 * [TUG引文包目錄](http://ftp.math.utah.edu/pub//tex/bib/index-table.html)（英文）
