@@ -49,6 +49,7 @@
 * [清華大學 TUNA 學會](http://tuna.tsinghua.edu.cn/)，提供開源鏡像
 * [POSIX 標準](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 * [ACM Symposium on Operating Systems Principles](http://sosp.org/)
+* [RawGit](https://rawgit.com/)，爲 GitHub 上的文件（尤其是圖像）提供正確的 Content-Type 標頭。參考 [StackOverflow](http://stackoverflow.com/q/13808020) 和 [GitHub issue](https://github.com/isaacs/github/issues/316)
 
 ### 大陸代碼託管
 
