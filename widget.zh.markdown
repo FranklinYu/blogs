@@ -16,6 +16,7 @@
 * LaTeX 腳本
     * [texfot](https://www.ctan.org/tex-archive/support/texfot)，簡化 TeX 系列編譯的輸出，適用於一切 TeX 系列命令。
     * [texliveonfly](https://www.ctan.org/pkg/texliveonfly)，讓 BasicTeX 用戶在編譯時自動安裝缺失的宏包。
+    * [latexmk](https://www.ctan.org/pkg/latexmk/)，自動判斷 TeX 系列命令（包括 BibTeX）運行次數。應配合 make 使用。
 
 ## Windows
 
