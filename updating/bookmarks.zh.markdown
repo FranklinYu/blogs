@@ -120,6 +120,7 @@ Bash
 * [Saturday Morning Breakfast Cereal](http://www.smbc-comics.com/)
 * [Wait But Why](http://waitbutwhy.com/)，英文趣味科普網站
 * [Dilbert](http://dilbert.com/)，《狗伯特极机密管理法则》原著
+* [Geek and Poke](http://geek-and-poke.com/)
 
 ## 遊戲
 
