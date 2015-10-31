@@ -26,6 +26,12 @@
 
 - 參考 [Github](https://www.python.org/dev/peps/pep-0008/) 。
 
+## JavaScript
+
+- 避免使用內置的 `window.prompt()`，`window.confirm()` 和 `window.alert()`。參考：
+    - [Programmers.SX](http://programmers.stackexchange.com/q/106031)
+    - [ESLint Rule](http://eslint.org/docs/rules/no-alert.html)
+
 ## Git
 
 - [一个成功的 Git 分支模型](http://www.oschina.net/translate/a-successful-git-branching-model)

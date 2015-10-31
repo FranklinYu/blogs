@@ -30,6 +30,13 @@
 
 - Refer to [Github](https://www.python.org/dev/peps/pep-0008/)
 
+## JavaScript
+
+- Avoid built-in `window.prompt()`, `window.confirm()` and `window.alert()`.
+  Reference:
+    - [Programmers.SX](http://programmers.stackexchange.com/q/106031)
+    - [ESLint Rule](http://eslint.org/docs/rules/no-alert.html)
+
 ## Git
 
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
