@@ -51,6 +51,7 @@
 * [ACM Symposium on Operating Systems Principles](http://sosp.org/)
 * [RawGit](https://rawgit.com/)，爲 GitHub 上的文件（尤其是圖像）提供正確的 Content-Type 標頭。參考 [StackOverflow](http://stackoverflow.com/q/13808020) 和 [GitHub issue](https://github.com/isaacs/github/issues/316)
 * [Hoogle](https://www.haskell.org/hoogle/)，Haskell API 搜索引擎
+* [e-shell](http://wanderinghorse.net/computing/shellish/eshell.html)，C++ 庫，用於編寫 REPL 命令行界面，類似一個殼層程序
 
 ### 大陸代碼託管
 
