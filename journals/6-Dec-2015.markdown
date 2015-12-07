@@ -1,0 +1,65 @@
+# 把腳本變成 OS X 的應用
+
+StackOverflow 上的[這個回答](http://stackoverflow.com/a/2169511)把我帶去[這篇教程](https://mhut.ch/journal/2010/01/24/creating_mac_app_bundle_for_gtk_app)，我把英文給翻譯一下。
+
+簡單起見，我就以我之前做的那個 KeePass 做例子好了。首先做一個文件夾 `KeePass.app`，裏面的結構是
+
+```text
+KeePass.app
+└── Contents
+    ├── Info.plist
+    ├── MacOS
+    │   ├── KeePass.exe
+    │   ├── KeePass.sh
+    │   └── (other files)
+    └── Resources
+        └── KeePass.icns
+```
+
+把啓動腳本（這裏是 `KeePass.sh`）放入 `MacOS` 文件夾；Resources 文件夾放的是 KeePass 的圖標。如果應用程序自己有圖標（比如 KeePass），那操作系統最後會採用應用程序自己的圖標；對於這些應用程序，圖標文件是可選的。注意蘋果的圖標文件格式是 `icns` 而不是微軟的 `ico`（有很多網站可以在線轉換）。注意到我把 KeePass 的文件（EXE、DLL 之類）展開到 `MacOS` 文件夾了，不過是放在子文件夾還是直接就地展開，取決於個人愛好（反正在啓動腳本 `KeePass.sh` 裏面會體現出來）。腳本名字不一定要帶後綴，因爲啓動方式是 `./KeePass.sh`，解釋器看 shebang。因爲 KeePass 沒有任何環境配置，所以啓動腳本很簡單：
+
+```shell
+#!/bin/sh
+
+cd "$(dirname "$0")"
+exec /usr/local/bin/mono KeePass.exe
+```
+
+第一行是 shebang；第三行是切換路徑到腳本所在路徑；第四行是實際的加載。第三行有必要，否則第四行會找不到 `KeePass.exe` 文件；第四行 mono 必須包含完整路徑，因爲 `/usr/local/bin/` 不在默認 `$PATH` 變量裏面（不會自動讀取用戶的 RC 文件的）。別忘了允許腳本執行（`chmod a+x`）。
+
+最後我們來寫 `Info.plist`。所謂 plist（property list）就是描述這個應用屬性的鍵值對，可以是二進制或者 XML 形式。顯然我們自己寫的話寫 XML 比較快。我這個應用的 plist 是
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>KeePass.sh</string>
+	<key>CFBundleIconFile</key>
+	<string>KeePass.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>info.keepass</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>KeePass</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.30</string>
+	<key>CFBundleSignature</key>
+	<string>xmmd</string>
+	<key>CFBundleVersion</key>
+	<string>2.30</string>
+	<key>NSAppleScriptEnabled</key>
+	<string>NO</string>
+</dict>
+</plist>
+```
+
+大部分看不懂的都不用改（比如那個 `CFBundleSignature` 其實已經棄用了），如果有興趣可以參考蘋果給的[詳細指示](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html)。改這麼幾個就好了：`CFBundleExecutable`，`CFBundleIconFile`，`CFBundleIdentifier`，`CFBundleName`，`CFBundleShortVersionString`，`CFBundleVersion`。其中 `CFBundleIdentifier` 做過蘋果開發的應該都知道，形如 `com.apple.iTools.Page` 的唯一標識符。`CFBundleName` 在應用程序啓動以後會顯示在 Dock 中。`CFBundleShortVersionString` 和 `CFBundleVersion` 之間的差別我尚不知道，因此我填了一樣的。如果沒有圖標，可以直接刪除 `CFBundleIconFile` 鍵值對。
+
+完成好 plist 以後，我們可以把整個文件夾拖入應用程序文件夾了；之後就和正常的文件一樣了。
