@@ -72,6 +72,9 @@
 * 代碼質量檢查
 	* [Hakiri](https://hakiri.io/)（Ruby）
     * [Quantified Code](https://www.quantifiedcode.com)（Python）
+* 團隊私人聊天室
+    * [HipChat](https://www.hipchat.com/)，Atlassian
+    * [Slack](https://slack.com/)
 
 ## Gnome shell
 
