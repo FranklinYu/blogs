@@ -15,6 +15,7 @@
 * [Apple Recycling Program](http://www.apple.com/recycling/gift-card/)，將舊的蘋果產品換成抵用券。
 * 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-%E4%BB%80%E9%BA%BC%E6%98%AFSysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 * [Portable Apps](http://portableapps.com/)
+* 配色網站：[日本色](http://nipponcolors.com/)和[中國色](http://zhongguose.com/)
 
 ## 有意思的網站
 
