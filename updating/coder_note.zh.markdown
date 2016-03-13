@@ -12,8 +12,11 @@
 		* [A Comparison of (Rack) Web Servers for Ruby Web Applications][DigitalOcean]
 		* [Rails Server Throwdown: Passenger, Unicorn or Puma?][Engine Yard Article]
 		* [App Server Arena: Part 1, A Comparison of Popular Ruby Application Servers][Engine Yard Blog]
+* 正確的 range 形式是半開區間 [a, b)；如果是 N 個數，應該是 [0, N) 而不是 [1,
+  N+1)。參考 [Dijkstra 的筆記][EWD831]。
 
 [Phusion]: https://github.com/phusion/passenger/wiki/Puma-vs-Phusion-Passenger "Passenger Wiki at GitHub"
 [DigitalOcean]: https://www.digitalocean.com/community/tutorials/a-comparison-of-rack-web-servers-for-ruby-web-applications "DigitalOcean"
 [Engine Yard Article]: https://www.engineyard.com/articles/rails-server "Engine Yard"
 [Engine Yard Blog]: https://blog.engineyard.com/2014/ruby-app-server-arena-pt1 "Engine Yard"
+[EWD831]: https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html
