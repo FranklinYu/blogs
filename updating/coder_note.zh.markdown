@@ -20,3 +20,9 @@
 [Engine Yard Article]: https://www.engineyard.com/articles/rails-server "Engine Yard"
 [Engine Yard Blog]: https://blog.engineyard.com/2014/ruby-app-server-arena-pt1 "Engine Yard"
 [EWD831]: https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html
+
+## 多態（多型）的定義
+
+* 特設多態（ad hoc polymorphism）：同一函數名，不同的參數給出不同的實現。比如 `add(Integer i, Integer j)` 和 `add(String i, String j)`。語言特性：函數重載，算子重載。
+* 參數多態（parametric polymorphism）：同一函數名，不同的參數給出同樣的實現。比如 `add(Integer i, Integer j)` 和 `add(Double i, Double j)`（會被抽象成 `add(T i, T j)`）。語言特性：泛型，模板。
+* 子類（subtyping，subtype polymorphism，inclusion polymorphism）：同一函數名，不同的調用對象給出不同的實現。語言特性：子類
