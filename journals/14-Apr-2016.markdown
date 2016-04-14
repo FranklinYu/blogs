@@ -1,0 +1,56 @@
+# XHTML 與 HTML5 polyglot
+
+今天打算寫一個靜態網頁（其實是個人簡歷）。原本打算用 XHTML 寫，因爲 HTML 不夠嚴格，感覺 XHTML 比較符合自己的作風。寫簡單的靜態網頁的時候我喜歡用 [W3C validator](https://validator.w3.org/) 驗證自己的網頁，然後貼一個[「驗證成功」的徽章](https://www.w3.org/QA/Tools/Icons)，感覺有逼格。先寫了一個 [MWE](https://en.wikipedia.org/wiki/Minimal_Working_Example)：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Example</title>
+</head>
+
+<body>
+  <h1>Example webpage</h1>
+  <p>
+    This is an example.
+  </p>
+</body>
+
+</html>
+```
+
+然後順利通過驗證。但是[這個答案](http://stackoverflow.com/a/32675273 "Answer: W3C validator and HTTPS")裏面說建議用戶用[新的 validator](https://validator.w3.org/nu/)，我就去試了一下，發現有一個警告：
+
+```text
+skipping entity: [dtd]
+At line 2, column 109
+```
+
+位置就在讀完那個 DTD 以後。搜索了一下，[這帖子](http://www.sitepoint.com/forums/showthread.php?p=3815275#post3815275 "W3C or Validome? Which one should I use?")說
+
+> It means that it doesn't process the DTD that the doctype references (for entity declarations and default attributes).
+
+下面又有說
+
+> Processing the DTD is optional per XML and so relying on it being processed is unsafe on the Web.
+
+那看來我應該去掉 DTD 了。但是我不知道該怎麼去：如果把網址字符串換成空字符串，這個警告還是會出現；如果直接整個字符串去掉，又會有解析錯誤。這時我看到網上說起一種叫做 [Polyglot HTML](https://en.wikipedia.org/wiki/Polyglot_markup) 的標準，也是同時滿足 HTML 和 XML 標準的，而且採用的 HTML 標準還是最新的 HTML5。趕緊試了一下，把維基百科給的 MWE 貼上去：
+
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>The title element must not be empty.</title>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+發現通過了驗證。XHTML 1.0 已經是 2000 年的標準了（最後一次修改是 2002 年），雖然兼容性會比較好，但是總感覺 HTML5 纔是未來。
+
+另外，[HTML5 的 polyglot](https://www.w3.org/TR/html-polyglot/) 標準不知道爲什麼被標明「停止維護」。即便如此，最後更新時間（2015 年）也比 XHTML 1.0 晚多了。
+
+這裏有一個細節，這段文本如果用後綴 `.xhtml` 而不是 `.html` 傳上去，驗證成功的網頁上會多兩條信息，表示 validator 使用了 XML 解析器；這兩種情況下舊的 validator 都會跳轉到新的 validator。然而同樣使用 `xhtml` 後綴，如果 `DOCTYPE` 標籤用的是 XHTML 1.0 的格式，則不會發生跳轉。
