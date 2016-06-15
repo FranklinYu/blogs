@@ -9,7 +9,8 @@
 - [Tabs for indentation, spaces for alignment](http://stackoverflow.com/a/8769873).
 - 函數返回值使用 `<cstdlib>` 中的巨集 `EXIT_SUCCESS` 或 `EXIT_FAILURE`。
 - 使用 `Makefile`；如果有GNU make，使用
-  [implicit rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html).
+    - [implicit rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html)
+    - [自動依賴生成](http://make.mad-scientist.net/papers/advanced-auto-dependency-generation/)
 - 編譯選項
     - 開發模式：`-g`
     - GCC：`-Wall -Wextra -pedantic -Wcast-qual`

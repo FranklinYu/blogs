@@ -11,8 +11,9 @@
 - [C coding standard](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)
 - [Tabs for indentation, spaces for alignment](http://stackoverflow.com/a/8769873).
 - Functions return with macros `EXIT_SUCCESS` or `EXIT_FAILURE` in `<cstdlib>`.
-- Use `Makefile`; if GNU make is available, use the
-  [implicit rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html).
+- Use `Makefile`; if GNU make is available, use
+    - [implicit rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html)
+    - [Auto-Dependency Generation](http://make.mad-scientist.net/papers/advanced-auto-dependency-generation/)
 - Compiling options
     - Development mode: `-g`
     - GCC: `-Wall -Wextra -pedantic -Wcast-qual`
