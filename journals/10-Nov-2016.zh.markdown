@@ -1,0 +1,44 @@
+# 用於替代 Bash 的腳本語言
+
+最近在研究「用 Python、Ruby 或者 Perl（下稱 PRP）腳本，替代某些複雜的 shell 腳本」的可能性。原因：
+
+1. shell 腳本沒有「模塊」和「權限」的設計，用到的所有 helper function 全部都要放在全局範圍以內。當系統變大的時候很容易「汙染全局命名空間」。RVM 是個典型的例子：當 shell 載入 RVM 以後，全局空間增加了三百多個函數。
+2. shell 腳本的命令參數全部都是字符串，沒有其他類型。PRP 的參數傳遞功能更加豐富，可讀性更高。
+
+下面以此為目的，比較一下三種語言。
+
+## 性能
+
+這裡只考察啟動時間，因為
+
+1. 大多數腳本都不大
+2. 綜合性能難以評估
+3. 性能瓶頸可以用「C 擴展」來補救
+
+實驗命令：
+
+```shell
+cat <(time perl -e '1') <(time python -c '1') <(time ruby -e '1')
+```
+
+在 OS X 的 zsh 上給出的結果是
+
+```text
+perl -e '1'  0.00s user 0.00s system 64% cpu 0.013 total
+python -c '1'  0.02s user 0.02s system 83% cpu 0.046 total
+ruby -e '1'  0.35s user 0.09s system 80% cpu 0.554 total
+```
+
+可見 Perl 的啟動時間最短，Ruby 啟動時間很長。
+
+## 語法
+
+我對 Perl 不熟，只比較 Python 和 Ruby。語法優劣常常和美學掛鉤，因此這裡的「優劣」較為主觀。Python 的缺點：
+
+* 由於歷史原因（Python 2 裡對象沒有統一的祖先），大量的系統函數都是 `func(obj)` 的形式，比如 `str(a)` 和 `len(a)`（自定義類型則使用[特殊方法](https://docs.python.org/2/reference/datamodel.html#special-method-names)間接修改系統函數的行為）。在 Ruby 中，這兩個函數是 `a.to_s` 和 `a.length`，更加「面向對象」。
+
+總的來說，語法上我更偏好 Ruby。
+
+## 兼容性
+
+大多數 \*nix 平臺都預裝了 Python 2 和 Perl；除 OS X 之外的平臺，其他平臺下都需要手動安裝 Ruby。

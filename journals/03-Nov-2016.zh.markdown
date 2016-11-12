@@ -1,0 +1,29 @@
+# 用 Dart 實現 Angular 2 碰到的問題
+
+## WebStorm 和官網模板混用
+
+我一開始用 WebStorm 生成空白 Angular 模板，然後按照 Angular 官網的教程學習。走到 [the Hero Editor](https://angular.io/docs/dart/latest/tutorial/toh-pt1.html) 這步的時候，通不過編譯，報錯
+
+```text
+Can't bind to 'ngModel' since it isn't a known native property or known directive.
+Please fix typo or add to directives list.
+```
+
+經過排查，發現是在 `pubspec.yaml` 裡面少了兩行
+
+```yaml
+platform_directives:
+- 'package:angular2/common.dart#COMMON_DIRECTIVES'
+platform_pipes:
+- 'package:angular2/common.dart#COMMON_PIPES'
+```
+
+## 教程缺失內容
+
+在 [Service](https://angular.io/docs/dart/latest/tutorial/toh-pt4.html) 這步，使用 Future 的時候，正文沒有提及需要添加
+
+```dart
+import 'dart:async';
+```
+
+僅在結尾的「回顧」章節裡提及。若有時間，可以提交給[代碼庫](https://github.com/angular/angular.io)。
