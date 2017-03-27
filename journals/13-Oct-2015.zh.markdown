@@ -23,3 +23,5 @@ elif platform.system() == 'Darwin':
 而且需要在前面的 `import` 處加上 `platform` 庫。小心備份然後編輯了以後，運行 `texliveonfly` 的時候果然順利彈出密碼框。
 
 [這個問題](http://tex.stackexchange.com/q/29366) 的題主看起來像是這個包的維護者；我已經評論此問題，希望他能儘早看到並更新。
+
+更新：已提交[拉取請求](https://github.com/maphy-psd/texliveonfly/pull/3)。
