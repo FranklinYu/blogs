@@ -22,7 +22,7 @@ let's do this in Rails.
 In Rails, we deal with new `Accept` headers by registering the MIME types, which
 is mentioned in [the guide][]. Essentially, you add this line to the file
 `config/initializers/mime_types.rb` (which should have been populated with
-instructions the project is generated with [Rails generator][]):
+instructions if the project was generated with [Rails generator][]):
 
 ```ruby
 Mime::Type.register 'application/vnd.com.example.v2+json', :api_v2
