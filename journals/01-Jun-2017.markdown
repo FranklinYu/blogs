@@ -1,0 +1,142 @@
+# API versioning with "Accept" header in Rails
+
+Typically Rails applications version their API by path prefix, or subdomain.
+However, as described by [this blog][blog], another (the best?) way for API
+versioning is to specify the version in [`Accept` header][accept]:
+
+```text
+Accept: application/vnd.com.example.v2+json
+```
+
+where the namespace `vnd` is the [vendor tree][] among the MIME type
+registration trees. Django REST framework [provides this feature][django]; now
+let's do this in Rails.
+
+[blog]: https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/
+[accept]: https://tools.ietf.org/html/rfc7231#section-5.3.2
+[vendor tree]: https://tools.ietf.org/html/rfc6838#section-3.2
+[django]: http://www.django-rest-framework.org/api-guide/versioning/#using-accept-headers-with-vendor-media-types
+
+## simple one
+
+In Rails, we deal with new `Accept` headers by registering the MIME types, which
+is mentioned in [the guide][]. Essentially, you add this line to the file
+`config/initializers/mime_types.rb` (which should have been populated with
+instructions the project is generated with [Rails generator][]):
+
+```ruby
+Mime::Type.register 'application/vnd.com.example.v2+json', :api_v2
+```
+
+where `:api_v2` is whatever name you like. Now you can specify different
+behavior in controller like
+
+```ruby
+respond_to do |format|
+  format.api_v1 { render @data_for_v1 }
+  format.api_v2 { render @data_for_v2 }
+end
+```
+
+thanks to the [`#respond_to`][respond_to] method.
+
+[the guide]: http://guides.rubyonrails.org/v5.1.1/action_controller_overview.html#restful-downloads
+[Rails generator]: http://guides.rubyonrails.org/v5.1.1/generators.html
+[respond_to]: http://api.rubyonrails.org/v5.1.1/classes/ActionController/MimeResponds.html#method-i-respond_to
+
+## more tricky way: split by module
+
+The approach above put implementation of different versions in the same
+controller. For example, the path `/users` for all the versions are handled
+within `UsersController`. This may be what you want, but I don't like this; what
+if in some version there is no `/users` path at all? Rendering "Not Found" in
+controller in this case looks like a hack, because this is totally part of
+router logic. I want to group controller of each version in a separate folder,
+like
+
+  * `app/controllers`
+      * `v1`
+          * `users_controller.rb`
+          * `comments_controller.rb`
+      * `v2`
+          * `users_controller.rb`
+          * `posts_controller.rb`
+
+so that I can control them separately. The controllers can be easily generated
+with Rails generator like
+
+```sh
+$ rails generate controller v1/user
+```
+
+Ultimately, I need to route to controllers by formats, that is, I need some
+tricks in `config/routes.rb`.
+
+The solution is a rarely mentioned feature in Rails router:
+[request-based constraints][constraint]. This is the way we decide the routing
+based on the request object. The request object knows the format, so we can
+decide routing for the request accordingly.
+
+[constraint]: http://guides.rubyonrails.org/v5.1.1/routing.html#request-based-constraints
+
+Meanwhile, I want to specify the folder and namespace, while keeping the path
+clean: the paths for second version should *not* be prefixed with `/v1` (which
+is path-based versioning, not header-based one we're talking about), but they
+should be routed to controllers under folder `v1`. This is well documented in
+[the guide][scope guide]:
+
+```ruby
+scope module: 'v1' do
+  resources :articles, :comments
+end
+```
+
+[scope guide]: http://guides.rubyonrails.org/v5.1.1/routing.html#controller-namespaces-and-routing
+
+Combined with the request-based constraints mentioned above, we have
+
+```ruby
+scope module: 'v1', constraints: lambda { |req| req.format == :api_v1 } do
+  resources :articles, :comments
+end
+
+scope module: 'v2', constraints: lambda { |req| req.format == :api_v2 } do
+  resources :posts, :comments
+end
+```
+
+## pitfall
+
+Note that one might think it suffices to have
+
+```ruby
+scope module: 'v1', constraints: {format: :api_v1} } do
+  resources :articles, :comments
+end
+```
+
+which looks neater. This even *seems to* work when you have only one version. It
+immediately breaks if you have two versions:
+
+```ruby
+scope module: 'v1', constraints: {format: :api_v1} } do
+  resources :articles, :comments
+end
+
+scope module: 'v2', constraints: {format: :api_v2} } do
+  resources :articles, :comments
+end
+```
+
+Overlapping requests can never reach the version below; if you swap their order,
+you will see all the requests caught by `v2`. (Recall that in`config/routes.rb`,
+order matters.) This is explained in [the doc][constraint]:
+
+> There is an exception for the `format` constraint: while it's a method on the
+> Request object, it's also an implicit optional parameter on every path.
+> Segment constraints take precedence and the `format` constraint is only
+> applied as such when enforced through a hash. For example, `get 'foo',
+> constraints: { format: 'json' }` will match `GET  /foo` because the format is
+> optional by default. However, you can use a lambda like in `get 'foo',
+> constraints: lambda { |req| req.format == :json }` and the route will only
+> match explicit JSON requests.
