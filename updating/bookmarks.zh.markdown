@@ -8,12 +8,10 @@
 * [Steam Signature](http://steamsignature.com/)，Steam簽名檔圖片
 * [上海市空氣質量實時發佈系統](http://www.semc.com.cn/aqi/home/Station.aspx)
 * [CD 包](http://www.cdbao.net/)音樂論壇
-* [買個便宜貨](http://www.mgpyh.com)
 * [*Cities in Motion 2* Forum](http://forum.paradoxplaza.com/forum/forumdisplay.php?740-Cities-in-Motion-2)
-* [實名鑽戒訂做【戴瑞】](http://www.13520.com.cn)
 * [路由器橋接指南](http://www.ehow.com/how_2308651_use-router-as-repeater.html)（英文），把路由器當天線擴展來用。來自eHow。
 * [Apple Recycling Program](http://www.apple.com/recycling/gift-card/)，將舊的蘋果產品換成抵用券。
-* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-%E4%BB%80%E9%BA%BC%E6%98%AFSysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
+* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 * [Portable Apps](http://portableapps.com/)
 * 配色網站：[日本色](http://nipponcolors.com/)和[中國色](http://zhongguose.com/)
 
@@ -34,7 +32,6 @@
 ## 個人博客
 
 * [博客集合](http://www.daquan8.com/)
-* [Matrix67](http://www.matrix67.com/)（顾森）和[考據癖](http://localhost-8080.com/)（蔡雪琴）夫婦
 * [始终](http://liam0205.me/)，ctex巨集包維護者
 
 ## 學術
@@ -42,15 +39,13 @@
 * [standard predefined macros in GCC](https://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html)
 * [netsh](http://www.netsh.org/)，計算機相關博客站，包含Host源。
 * [GitBook](https://www.gitbook.com)，使用Markdown編寫、使用Git發佈的書籍編寫系統。
-* [XML 與 HTML 字元實體引用列表](http://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8)（型如`&amp;`）
-* [SegmentFault](http://segmentfault.com/)
+* [XML 與 HTML 字元實體引用列表](http://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（型如`&amp;`）
 * [NMAKE Reference](https://msdn.microsoft.com/en-us/library/dd9y37ha.aspx)，來自 MSDN。NMake 是 Visual Studio 提供的 make 軟件。
 * [error when installing Eclipse CDT](http://askubuntu.com/q/312660/387188)
 * [choosing a Linux distribution](http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution)
 * [清華大學 TUNA 學會](http://tuna.tsinghua.edu.cn/)，提供開源鏡像
 * [POSIX 標準](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 * [ACM Symposium on Operating Systems Principles](http://sosp.org/)
-* [RawGit](https://rawgit.com/)，爲 GitHub 上的文件（尤其是圖像）提供正確的 Content-Type 標頭。參考 [StackOverflow](http://stackoverflow.com/q/13808020) 和 [GitHub issue](https://github.com/isaacs/github/issues/316)
 * [Hoogle](https://www.haskell.org/hoogle/)，Haskell API 搜索引擎
 * [e-shell](http://wanderinghorse.net/computing/shellish/eshell.html)，C++ 庫，用於編寫 REPL 命令行界面，類似一個殼層程序
 
