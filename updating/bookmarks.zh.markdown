@@ -5,12 +5,10 @@
 * [幫助改進谷歌翻譯](https://translate.google.com/community)
 * [中国政治坐标系测试](http://zuobiao.me/)
 * [SpotCrime](http://spotcrime.com/)，查詢周邊犯罪記錄（僅限美國）。
-* [Steam Signature](http://steamsignature.com/)，Steam簽名檔圖片
 * [上海市空氣質量實時發佈系統](http://www.semc.com.cn/aqi/home/Station.aspx)
 * [CD 包](http://www.cdbao.net/)音樂論壇
 * [路由器橋接指南](http://www.ehow.com/how_2308651_use-router-as-repeater.html)（英文），把路由器當天線擴展來用。來自eHow。
 * [Apple Recycling Program](http://www.apple.com/recycling/gift-card/)，將舊的蘋果產品換成抵用券。
-* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 * [Portable Apps](http://portableapps.com/)
 * 配色網站：[日本色](http://nipponcolors.com/)和[中國色](http://zhongguose.com/)
 
@@ -104,6 +102,7 @@ Bash
 * [數字地球](http://www.digitalearth.cn/ "GeoBeans")
 * [Microsoft Academic Search](http://academic.research.microsoft.com/)
 * [修改Mathematica默認筆記本顯示放大率](http://forums.wolfram.com/student-support/topics/21046 "increasing default font size")，來自 Wolfram 學生支持論壇（現已關閉並遷移至 Wolfram 社區）
+* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 
 ## 漫畫閱讀
 
@@ -124,6 +123,7 @@ Bash
 * [Humble Bundle](https://www.humblebundle.com/)
 * [Cities In Motion 論壇](http://forum.paradoxplaza.com/forum/forumdisplay.php?740-Cities-in-Motion-2)
 * [Agar](http://agar.io/)，網頁遊戲，類似孢子第一階段
+* [Steam Signature](http://steamsignature.com/)，Steam簽名檔圖片
 
 ## 敏感信息
 
