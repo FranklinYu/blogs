@@ -45,6 +45,9 @@
 * [ACM Symposium on Operating Systems Principles](http://sosp.org/)
 * [Hoogle](https://www.haskell.org/hoogle/)，Haskell API 搜索引擎
 * [e-shell](http://wanderinghorse.net/computing/shellish/eshell.html)，C++ 庫，用於編寫 REPL 命令行界面，類似一個殼層程序
+* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
+* [PKI 格式介紹](https://www.cem.me/pki/index.html)
+* [CodinGame](https://www.codingame.com/)，在遊戲中學代碼
 
 ### 大陸代碼託管
 
@@ -102,7 +105,6 @@ Bash
 * [數字地球](http://www.digitalearth.cn/ "GeoBeans")
 * [Microsoft Academic Search](http://academic.research.microsoft.com/)
 * [修改Mathematica默認筆記本顯示放大率](http://forums.wolfram.com/student-support/topics/21046 "increasing default font size")，來自 Wolfram 學生支持論壇（現已關閉並遷移至 Wolfram 社區）
-* 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
 
 ## 漫畫閱讀
 
