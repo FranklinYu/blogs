@@ -8,7 +8,6 @@
 * [Steam Signature](http://steamsignature.com/)，Steam簽名檔圖片
 * [上海市空氣質量實時發佈系統](http://www.semc.com.cn/aqi/home/Station.aspx)
 * [CD 包](http://www.cdbao.net/)音樂論壇
-* [*Cities in Motion 2* Forum](http://forum.paradoxplaza.com/forum/forumdisplay.php?740-Cities-in-Motion-2)
 * [路由器橋接指南](http://www.ehow.com/how_2308651_use-router-as-repeater.html)（英文），把路由器當天線擴展來用。來自eHow。
 * [Apple Recycling Program](http://www.apple.com/recycling/gift-card/)，將舊的蘋果產品換成抵用券。
 * 什麼是 `SysWOW64`？為什麼64位系統的設定檔還在 `System32` 裏？[繁體中文](http://blog.xuite.net/auster.lai/twblog/123089423-什麼是SysWow64)，[英文](http://www.samlogic.net/articles/32-64-bit-windows-folder-x86-syswow64.htm)。
