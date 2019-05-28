@@ -69,9 +69,9 @@ Python
 
 Ruby
 
-* [Start Using Ruby % (Percent) Notation](http://teohm.com/blog/2012/10/15/start-using-ruby-percent-notation/)
-* 特殊符號：[Wikia](http://ruby.wikia.com/wiki/Special_variable)，[GitHub](https://github.com/ruby/ruby/blob/trunk/lib/English.rb)。
-* [Rubygems 國內鏡像](https://ruby.taobao.org)
+* [Percent Strings](https://docs.ruby-lang.org/en/2.6.0/syntax/literals_rdoc.html#label-Percent+Strings)
+* 特殊符號：[Wikia](http://ruby.wikia.com/wiki/Special_variable)，[Documentation](https://docs.ruby-lang.org/en/2.6.0/English.html)。
+* [Rubygems 國內鏡像](https://gems.ruby-china.com/)
 * 常用官網：[Ruby](https://www.ruby-lang.org/zh_tw/)，[Ruby 文檔](http://ruby-doc.org/)，[RubyGems](https://rubygems.org/)，[Ruby 工具箱](https://www.ruby-toolbox.com/)
 
 Bash
