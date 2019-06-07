@@ -57,6 +57,12 @@
 * [京東代碼庫](https://code.jd.com)
 * [Coding.Net](https://coding.net)
 
+### 其他 SaaS
+
+* 日誌收集
+    * Papertrail
+    * sumo logic（支持 [Docker](https://help.sumologic.com/07Sumo-Logic-Apps/10Containers_and_Orchestration/Docker/01-Collect-Logs-and-Metrics-from-Docker)）
+
 ### 腳本
 
 Python
