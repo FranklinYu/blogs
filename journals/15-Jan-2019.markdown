@@ -1,0 +1,64 @@
+---
+tags: rant
+---
+
+# customized themes removed from Stack Exchange network
+
+I found today that the Stack Exchange network removed the cability for each site
+to customize its theme last year. Users [were complaining][1] but the staff
+didn’t seem to be listening. [The reasons they gave][2] were far from convincing:
+
+> Given that highly themed sites are the minority and that the current theming
+> level is unsustainable, we're going to have to disappoint here.
+
+It’s unclear how the theming was unsustainable. Technical details were missing.
+
+> In addition, things like voting and favorite buttons are a core part of the
+> Q&A experience that should be shared across the network.
+
+I agree that the *presence* and *position* of voting and favorite buttons should
+be shared so that new users quickly find them, but why should the *shape* of
+buttons be shared? Had any user ever got confused by custom design of a button?
+
+For example, Microsoft keeps the position of Start button for Windows, but the
+design (icon) of the button changes for every major version. Users may like the
+new button shape or not, but they never have difficulty *finding* the button.
+
+> The benefit is that most sites will have a theme, and theming for all sites
+> will extend to the mobile experience.
+
+The additional code for this on mobile platform is *marginal*. As long as the
+sprite is clearly specified (just as before), they only need to set the button
+image accordingly. I expect software engineers in Stack Overflow to be more
+experienced than I am, so it should be easy for them to find a maintainable way
+to do this (otherwise the technical difficulty should have been explained in
+details).
+
+In comment area:
+
+> That is in addition to making a more scalable and sustainable model that will
+> be less likely to break.
+
+Still unclear how it affects scalability. Specify the sprite clearly, and the
+community will work out the rest. Sounds like an easy way to cut the cost of
+graphic design while attracting more community moderators. And developers only
+need to do this *once*.
+
+[1]: https://meta.stackexchange.com/questions/307862/ch-ch-ch-changes-left-nav-responsive-design-themes#307884
+[2]: https://meta.stackexchange.com/questions/309349/left-nav-responsive-design-and-theming-next-steps
+
+In [another request][3] it became clear: it’s just their “belief” that buttons
+should stay the same. The post has a really good summary of the doubt:
+
+> …it literally cost more money to remove than to keep.
+
+The only solution is to build a [user-style][] replacing the images. This seems
+possible since the sprites are still available, such as [Worldbuilding][],
+[Super User][], and [Ask Ubuntu][]. I have not yet found any such user-style
+on GitHub.
+
+[3]: https://meta.stackexchange.com/questions/312365/rollout-of-new-network-site-themes#312552
+[user-style]: https://add0n.com/stylus.html
+[worldbuilding]: https://cdn.sstatic.net/Sites/worldbuilding/img/sprites.svg
+[Super User]: https://cdn.sstatic.net/Sites/superuser/img/sprites.svg
+[Ask Ubuntu]: https://cdn.sstatic.net/Sites/askubuntu/img/sprites.svg
