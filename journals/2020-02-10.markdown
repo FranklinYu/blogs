@@ -1,0 +1,116 @@
+# debugging locale issue on macOS
+
+Spoiler: the conclusion is simple and silly.
+
+I was setting up my new iMac, and the `gls` (GNU version of `ls`) from MacPorts
+couldn’t show Chinese. For example, the file `未命名.md` was shown as
+
+```
+''$'\346\234\252\345\221\275\345\220\215''.md'
+```
+
+I spent an entire day debugging this issue.
+
+## how I spent the day
+
+In the beginning I wasn’t aware that it’s locale issue. My first guess was that
+the MacPorts binary package was broken, which seemed to be verified when `gls`
+from Homebrew printed the filename without issue (I installed Homebrew in my
+home folder, so bottles won’t work). To compile the port from source, online Q&A
+recommended
+
+```sh
+sudo port -s install coreutils
+```
+
+but this compiles `coreutils` *and its dependencies*. I posted the question on
+[Stack Exchange][1], and later asked on [IRC][]. [Joshua][] recommended
+
+```sh
+sudo port destroot coreutils
+```
+
+which did compile this port without compiling dependencies. Actually it only did
+the `destroot` phase (and phases before), without actually installing it, since
+installation is a phase *after* `destroot`. The generated executable was found
+in folder
+
+```
+/opt/local/var/macports/build/
+```
+
+The problem persisted for the compiled `gls`. I did some more experiments and
+found that `gls` could only show ASCII; it failed to correctly show either
+[Korean characters (Hangul)][Hangul] or anything with [diacritical mark][2].
+This convinced me that it could be some issue with the port, so I created a
+[MacPorts ticket][ticket].
+
+[1]: https://apple.stackexchange.com/questions/381667/force-macports-to-build-from-source
+[2]: https://en.wikipedia.org/wiki/Diacritic
+[Hangul]: https://en.wikipedia.org/wiki/Hangul
+[IRC]: https://echelog.com/logs/browse/macports/1581202800
+[Joshua]: https://github.com/jmroot
+[ticket]: https://trac.macports.org/ticket/60065
+
+Then I had some lengthy discussion on IRC with [Clemens][], who correctly
+pointed out that my problem can be with locale (finally on the right track).
+My locale was like
+
+```
+LANG=
+LC_COLLATE="C"
+LC_CTYPE="UTF-8"
+LC_MESSAGES="C"
+LC_MONETARY="C"
+LC_NUMERIC="C"
+LC_TIME="C"
+LC_ALL=
+```
+
+[Clemens]: https://github.com/neverpanic
+
+This looked very unusual: `$LANG` shouldn’t be empty in any case, and why was
+`$LC_CTYPE` different from others? This was independent of my terminal because
+it happened both to Terminal and iTerm2. Even more confusingly, I had been
+synchronizing my shell configurations, and this didn’t happened on my old Mac
+mini running macOS Mojave. Maybe something changed in Catalina?
+
+The MacPorts ticket was closed since it’s not a MacPorts issue. Clemens
+said that the broken locale on macOS was a known issue; he suggested simply
+overriding them in `.profile`. I didn’t like this solution because:
+
+ 1. I don’t like setting the language twice. I already set it in System
+    Preferences, and the terminal emulator should have picked it up.
+ 1. I synchronizes my configuration files between different machines; on some of
+    them I want the interface in Chinese, others in English. Hardcoding won’t
+    work, while computing the right locale could be fragile or complicated.
+
+Nevertheless, I decided to do that with a “temporary solution” note. After that,
+I started drafting a feature request for iTerm2 to set the `$LANG` based on
+system language, hoping that this could be my long-term solution. In the issue
+description I planned to add a screenshot for the “Language & Region” preference
+panel; not until then did I find the culprit.
+
+## root cause
+
+My *Language* was set to “Chinese (China)”, but the *Region* was set to United
+States. macOS tries to set up `$LANG` by combining the language and region,
+which is *very confusing* because the Language field already contains region!
+For example, if you set language to “English (UK)” and region to “United
+States”, then your `$LANG` would be `en_US.UTF-8` instead of `en_GB.UTF-8`.
+
+To confuse you even more, they decided *not* to set a `$LANG` when the
+combination is unknown (in my case `zh_US` is invalid), *without warning user*!
+I think there is some room for improvement in the preference panel; at least add
+a warning symbol with a message like
+
+> Your language doesn’t match your region; some application may not work as
+> expected.
+
+## side story
+
+On Linux, when `$LANG` is Chinese, `ls -l` prints month name in Chinese, like
+“2月”. macOS doesn’t have this nice feature for either BSD one or GNU one, and
+months are formatted as numbers. I ended up prepending `LC_TIME=en_US.UTF-8` to
+my `ll` alias, making the date “Feb 3 2020” instead of “2 3 2020”. This is macOS
+specific, so the alias definition wasn’t synchronized.
